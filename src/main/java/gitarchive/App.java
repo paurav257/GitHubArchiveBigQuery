@@ -44,7 +44,7 @@ public class App extends TimerTask {
                     "FROM githubarchive.day.@startDate, githubarchive.day.@endDate " +
                     "WHERE type = 'PushEvent' and payload is not null " +
                     "AND TIMESTAMP(created_at) > TIMESTAMP('@startTime')" +
-                    "AND TIMESTAMP(created_at) < TIMESTAMP('@endTime')) order by created_at;;";
+                    "AND TIMESTAMP(created_at) < TIMESTAMP('@endTime')) order by created_at;";
 
     // Time window in milliseconds
     static final int timeWindow = 1000 * 60 * 60 * 6;
