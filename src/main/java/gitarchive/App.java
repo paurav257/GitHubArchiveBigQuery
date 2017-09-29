@@ -153,9 +153,6 @@ public class App extends TimerTask {
         if (size % 2 != 0)
             return reservoir.get((int) ceil(size / 2));
         else {
-            logger.debug(reservoir.get((size / 2)));
-            logger.debug(size / 2);
-            logger.debug(reservoir.get((size / 2) + 1));
             return ((reservoir.get(size / 2) + reservoir.get((size / 2) + 1)) / 2);
         }
     }
